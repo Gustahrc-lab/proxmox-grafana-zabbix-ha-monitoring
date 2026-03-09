@@ -3,7 +3,7 @@ host = "192.168.1.50"
 port = 389
 use_ssl = false
 bind_dn = "CN=grafana-svc,OU=Contas de Service,OU=Usuarios,DC=treinamento,DC=local"
-bind_password = "Gusta@098123"
+bind_password = "Treinamento@123456"
 search_base_dns = ["DC=treinamento,DC=local"]
 search_filter = "(sAMAccountName=%s)"
 
