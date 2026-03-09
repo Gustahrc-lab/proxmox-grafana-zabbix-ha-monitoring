@@ -247,7 +247,7 @@ usermod -aG docker seunome
 
 PARTE 5 — Estrutura do projeto no Git
 bashgit config --global user.name "gustahrc-lab"
-git config --global user.email "gustavosonivon@gmail.com"
+git config --global user.email "GUSTAVO@TREINAMENTO.COM"
 
 mkdir -p /opt/monitoring
 cd /opt/monitoring
