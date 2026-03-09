@@ -1,0 +1,12 @@
+[Unit]
+Description=Update Nginx proxy with Docker container IPs
+After=docker.service monitoring.service
+Requires=docker.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/update-nginx-proxy.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
