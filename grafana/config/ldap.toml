@@ -1,0 +1,23 @@
+[[servers]]
+host = "192.168.1.50"
+port = 389
+use_ssl = false
+bind_dn = "CN=grafana-svc,OU=Contas de Service,OU=Usuarios,DC=treinamento,DC=local"
+bind_password = "Gusta@098123"
+search_base_dns = ["DC=treinamento,DC=local"]
+search_filter = "(sAMAccountName=%s)"
+
+[servers.attributes]
+name = "givenName"
+surname = "sn"
+username = "sAMAccountName"
+member_of = "memberOf"
+email = "mail"
+
+[[servers.group_mappings]]
+group_dn = "CN=GrafanaAdmins,OU=Groups,DC=treinamento,DC=local"
+org_role = "Admin"
+
+[[servers.group_mappings]]
+group_dn = "*"
+org_role = "Viewer"
