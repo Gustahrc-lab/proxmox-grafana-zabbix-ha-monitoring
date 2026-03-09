@@ -81,7 +81,7 @@ Acesse:
 ##  Documentação completa ## 
 
 
-A documentação completa com passo a passo de toda a implantação está disponível [aqui] (./docs/manual.md)
+A documentação completa com passo a passo de toda a implantação está disponível [aqui](./docs/manual.md)
 
 ##  Autor  ##
 
