@@ -295,7 +295,7 @@ host = "192.168.1.50"
 port = 389
 use_ssl = false
 bind_dn = "CN=grafana-svc,OU=Contas de Service,OU=Usuarios,DC=treinamento,DC=local"
-bind_password = "Treinamento@123456"
+bind_password = "XXXXXXXXXXX"
 search_base_dns = ["DC=treinamento,DC=local"]
 search_filter = "(sAMAccountName=%s)"
 
@@ -317,7 +317,7 @@ EOF
 Testar conectividade LDAP antes de subir os containers:
 bashldapsearch -x -H ldap://192.168.1.50 \
   -D "CN=grafana-svc,OU=Contas de Service,OU=Usuarios,DC=treinamento,DC=local" \
-  -w "Treinamento@123456" \
+  -w "XXXXXXXXXXXXX" \
   -b "DC=treinamento,DC=local" \
   "(sAMAccountName=grafana-svc)"
 Deve retornar result: 0 Success e userAccountControl: 66048 (conta habilitada).
@@ -623,7 +623,7 @@ ping 192.168.1.50
 # Teste LDAP completo
 ldapsearch -x -H ldap://192.168.1.50 \
   -D "CN=grafana-svc,OU=Contas de Service,OU=Usuarios,DC=treinamento,DC=local" \
-  -w "Treinamento@123456" \
+  -w "XXXXXXXXXX" \
   -b "DC=treinamento,DC=local" \
   "(sAMAccountName=grafana-svc)"
 ```
@@ -644,5 +644,6 @@ Port: 389
 Base DN: DC=treinamento,DC=local
 Search attribute: sAMAccountName
 Bind DN: CN=grafana-svc,OU=Contas de Service,OU=Usuarios,DC=treinamento,DC=local
-Bind password: Treinamento@123456
+Bind password: XXXXXXXXXX
+
 Clique em Test authentication antes de salvar.
